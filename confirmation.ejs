@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #e0f7fa 25%, #00bfa5 100%);
+            overflow: hidden;
+        }
+
+        .confirmation-container {
+            position: relative;
+            text-align: center;
+            width: 350px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: popUp 1s ease-in-out;
+        }
+
+        @keyframes popUp {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+        }
+
+        .checkmark-circle {
+            stroke-dasharray: 360;
+            stroke-dashoffset: 360;
+            stroke: #28a745;
+            stroke-width: 4;
+            fill: none;
+            animation: drawCircle 0.8s ease-in-out forwards;
+        }
+
+        .checkmark-check {
+            stroke-dasharray: 50;
+            stroke-dashoffset: 50;
+            stroke: #28a745;
+            stroke-width: 4;
+            fill: none;
+            animation: drawCheck 0.5s ease-in-out forwards 0.8s;
+        }
+
+        @keyframes drawCircle {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes drawCheck {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        /* Airplane */
+        .airplane {
+            position: absolute;
+            top: 50%;
+            left: -100px;
+            width: 100px;
+            height: 50px;
+            background: url('https://cdn-icons-png.flaticon.com/512/2924/2924372.png') no-repeat center center;
+            background-size: contain;
+            animation: flyAway 3s ease-in-out 1.5s forwards;
+        }
+
+        @keyframes flyAway {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(400px, -100px) rotate(10deg);
+            }
+            100% {
+                transform: translate(800px, -200px) rotate(30deg);
+                opacity: 0;
+            }
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <svg class="checkmark" viewBox="0 0 52 52">
+            <circle class="checkmark-circle" cx="26" cy="26" r="25" />
+            <path class="checkmark-check" d="M14 27l7 7 14-14" />
+        </svg>
+        
+        <div class="confirmation-message">
+            <h1>Booking Confirmed!</h1>
+            <p>Thank you <strong><%= booking.name %></strong>, for booking <strong><%= booking.noOfTickets %></strong> ticket(s) for our Events.</p>
+            <p>A confirmation has been sent to: <strong><%= booking.email %></strong></p>
+        </div>
+    </div>
+</body>
+</html>

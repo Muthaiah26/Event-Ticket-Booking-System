@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #080808e1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #otpForm {
+            background-color: rgba(255, 255, 255, 0.15); 
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.25);
+            color: #292727d3;
+            font-size: 1rem;
+        }
+
+        input::placeholder {
+            color: #272424cc;
+        }
+
+        input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        button {
+            padding: 12px 20px;
+            width: 100%;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #00bfa5;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #009688;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            #otpForm {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>OTP Verification</h1>
+    <form id="otpForm" action="/verify-otp" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="text" name="noOfTickets" placeholder="Number of Tickets" required />
+    <input type="text" name="otp" placeholder="Enter OTP" required />
+    <button type="submit">Verify OTP</button>
+    </form>
+</body>
+</html>

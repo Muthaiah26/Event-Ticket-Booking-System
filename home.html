@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('/images/backimg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; 
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+       
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .section-title {
+            margin: 40px 0;
+            font-size: 2em;
+            color: hsla(0, 21%, 93%, 0.89);
+        }
+        .description {
+            font-size: 1em;
+            color: #f5ededec;
+            margin-bottom: 20px;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            background-color: #ddd;
+            flex: 0 1 20%; 
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(212, 247, 18, 0.1);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .card h3 {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .card p {
+            color: #666;
+        }
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .card a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+      
+       
+        <h2 class="section-title">Movies Events</h2>
+        <p class="description">Discover the latest blockbuster movies and thrilling cinema experiences.</p>
+        <div class="card-container">
+            <div class="card">
+                <img src="/images/inception.jpg" alt="Inception">
+                <h3>Inception</h3>
+                <p>A mind-bending thriller by Christopher Nolan</p>
+                <a href="/booking/1/movies">Book Now</a>
+            </div>
+            <div class="card">
+                <img src="/images/interstellar.jpg" alt="Interstellar">
+                <h3>Interstellar</h3>
+                <p>An epic science fiction film exploring space and time</p>
+                <a href="/booking/2/movies">Book Now</a>
+            </div>
+            <div class="card">
+                <img src="/images/dark_night.jpg" alt="The Dark Knight">
+                <h3>The Dark Knight</h3>
+                <p>Witness Batman in his epic battle against the Joker in Gotham City.</p>
+                <a href="/booking/3/movies">Book Now</a>
+            </div>
+          
+        </div>
+
+        <h2 class="section-title">Cricket Matches</h2>
+        <p class="description">Exciting cricket matchups that will keep you on the edge of your seat.</p>
+        <div class="card-container">
+            <div class="card">
+                <img src="/images/cricket_match1.jpg" alt="Cricket Match 1">
+                <h3>India vs Australia</h3>
+                <p>Exciting match between two cricket giants.</p>
+                <a href="/booking/1/cricket">Book Now</a>
+            </div>
+            <div class="card">
+                <img src="/images/cricket_match2.jpg" alt="Cricket Match 2">
+                <h3>England vs South Africa</h3>
+                <p>A high-intensity match between strong teams.</p>
+                <a href="/booking/2/cricket">Book Now</a>
+            </div>
+            <div class="card">
+                <img src="/images/cricket_match3.jpg" alt="Cricket Match 3">
+                <h3>Pakistan vs New Zealand</h3>
+                <p>A thrilling encounter between Pakistan and New Zealand.</p>
+                <a href="/booking/3/cricket">Book Now</a>
+            </div>
+           
+        </div>
+
+      
+
+    </div>
+
+</body>
+</html>

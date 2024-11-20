@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page - Event Ticket Booking</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Event Ticket Booking System</h1>
+        <nav>
+            <ul>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Available Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section id="register">
+            <h2>Register</h2>
+            <form action="/register" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section id="about">
+            <h2>About Event Ticket Booking</h2>
+            <p>
+                Welcome to our event ticket booking system, where you can book tickets for various exciting events like movies and cricket matches. We offer a simple and secure OTP-based booking confirmation to ensure your transactions are safe.
+            </p>
+        </section>
+
+        <section id="events">
+            <h2>Available Events</h2>
+            <p><a href="/home">Click here to view available events</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Event Ticket Booking System</p>
+    </footer>
+</body>
+</html>
